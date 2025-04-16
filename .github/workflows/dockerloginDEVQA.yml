@@ -20,8 +20,8 @@ jobs:
        username: ${{vars.DOCKERHUBUSERNAME}}
        password: ${{secrets.DOCKERHUBPASSWORD}}
     - name: Docker Build
-      run: docker build -t github-actions-demo .
+      run: docker build -t regapp .
     - name: Docker Tag
-      run: docker tag github-actions-demo neeharikarn9/github-actions-demo
+      run: docker tag regapp ckalandar/regapp
     - name: Docker Push
-      run: docker push neeharikarn9/github-actions-demo
+      run: docker push ckalandar/regapp
